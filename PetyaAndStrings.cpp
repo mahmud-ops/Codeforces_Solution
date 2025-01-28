@@ -20,7 +20,7 @@ int main() {
         cout << -1;
     } else if (str_1 > str_2) {
         cout << 1;
-`} else {
+} else {
         cout << 0;
     }
 
