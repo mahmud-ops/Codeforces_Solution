@@ -1,3 +1,4 @@
+//Stones on the table
 #include<iostream>
 #include<iomanip>
 #include<ctime>
