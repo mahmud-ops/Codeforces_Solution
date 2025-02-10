@@ -1,17 +1,26 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 
 int main(){
-    char str[1000];
-    gets(str);
+    char name[10000];
+    gets(name);
 
-    int sum = 0;
-    for(int i = 0 ; str[i] != '\0' ; i++){
-        int digit = str[i] - '0';
-        sum += digit; 
-    }
+    // for(int i = strlen(name) - 1 ; i >= 0; i--){
+    //     printf("%c",name[i]);
+    // }
 
-    printf("%s\n",str);
-    printf("sum = %d",sum);
+    printf("%s",strrev(name));
+
+    printf("\n");
+
+    int length = strlen(name);
+    printf("%d\n",length);
+
+    printf("%s\n",strupr(name));
+    printf("%s\n",strlwr(name));
+
+    printf("%s\n", strcat(strupr(name) ,strlwr(name)));
+
     return 0;
 }
