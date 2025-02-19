@@ -1,26 +1,14 @@
 #include<stdio.h>
-#include<string.h>
-#include<ctype.h>
 
 int main(){
-    char name[10000];
-    gets(name);
+    char string[1000];
+    fgets(string , sizeof(string) , stdin);
 
-    // for(int i = strlen(name) - 1 ; i >= 0; i--){
-    //     printf("%c",name[i]);
-    // }
+    int len;
+    for(int i = 0 ; string[i] != '\0' ; i++){
+      len = i + 1;  
+    }
 
-    printf("%s",strrev(name));
-
-    printf("\n");
-
-    int length = strlen(name);
-    printf("%d\n",length);
-
-    printf("%s\n",strupr(name));
-    printf("%s\n",strlwr(name));
-
-    printf("%s\n", strcat(strupr(name) ,strlwr(name)));
-
+    printf("Length = %d",len);
     return 0;
 }
