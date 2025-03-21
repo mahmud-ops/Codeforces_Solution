@@ -1,33 +1,16 @@
 #include<stdio.h>
-//1 1 2 3 5 8
-int fibo(int n){
-    if(n == 0){
-        return 0;
-    }
-    else if(n == 1){
-        return 1;
-    }
-    else{
-        return fibo(n - 1) + fibo(n -2) ;
-    }
-}
+// 0 1 1 2 3 5 
 int main(){
-    int n;
-    printf("Enter a number : ");
-    scanf("%d",&n);
+    int fibo[10000];
+    int length;
+    scanf("%d",&length);
 
-    if(n == 1){
-        printf("1st element of the fibonacci series is %d",fibo(n));
-    }
-    else if(n == 2){
-        printf("2nd element of the fibonacci series is %d",fibo(n));
-    }
-    else if(n == 3){
-        printf("3rd element of the fibonacci series is %d",fibo(n));
-    }
-    else{
-        printf("%dth element of the fibonacci series is %d",n,fibo(n));
-    }
+    fibo[0] = 0;
+    fibo[1] = 1;
 
+    for(int i = 2 ; i < length + 2 ; i++){
+        printf("%d ",fibo[i]);
+        fibo[i + 1] = fibo[i] + fibo[i - 1];
+    }
     return 0;
 }

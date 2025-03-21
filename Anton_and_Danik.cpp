@@ -11,7 +11,7 @@ int main(){
     for(int i = 0 ; i < n ; i++){
         players[i] = toupper(players[i]);
         if(players[i] == 'A'){
-            a++;
+           a++;
         }
         else if(players[i] == 'D'){
             d++;
