@@ -14,7 +14,7 @@ int main(){
             continue;
         }
         else{
-            num.push_back(i);
+            num.push_back(i+1-1);
         }
     }
 
